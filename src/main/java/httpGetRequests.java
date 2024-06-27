@@ -14,7 +14,6 @@ public class httpGetRequests {
                 get("https://reqres.in/api/users?page=2").
                 then().
                 assertThat().statusCode(200).
-                body("data[0].'email'",equalTo("john.lawson@reqres.in"));
-                //log().all();
+                body("data[0].'email'",equalTo("michael.lawson@reqres.in"));
     }
 }
