@@ -14,7 +14,9 @@ public class httpGetRequests {
                 get("https://reqres.in/api/users?page=2").
                 then().
                 assertThat().statusCode(200).
-                body("data[0].'email'",equalTo("michael.lawson@reqres.in"));
+                body("data[0].'email'",equalTo("michael.lawson@reqres.in")).
+                body("data[2].'last_name'",equalTo("Funke")).log().all();
+
     }
     @Test
     public void singleUser() {
@@ -34,5 +36,13 @@ public class httpGetRequests {
             then().
             assertThat().statusCode(404).
             log().all();
+    }
+    @Test
+    public void ListResource(){
+    given().
+            when().
+            get("https://reqres.in/api/unknown").
+            then().
+            assertThat().statusCode(200).log().all();
     }
 }

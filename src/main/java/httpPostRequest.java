@@ -42,7 +42,8 @@ public class httpPostRequest {
         given().contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(login.toJSONString())
-                .when().post("https://reqres.in/api/login")
+                .when()
+                .post("https://reqres.in/api/login")
                 .then()
                 .assertThat().statusCode(200).log().all();
     }
