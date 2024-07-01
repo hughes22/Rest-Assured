@@ -9,8 +9,8 @@ public class httpPatchRequest {
     @Test
     public void patchRequest() {
         JSONObject patchrequset = new JSONObject();
-        patchrequset.put("name", "Abena Mensah");
-        patchrequset.put("job", "FullStack Developer");
+        patchrequset.put("name", "Kwame Nkrumah");
+        patchrequset.put("job", "UIUX Developer");
         given().contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(patchrequset.toJSONString())
