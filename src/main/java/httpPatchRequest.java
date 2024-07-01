@@ -9,7 +9,7 @@ public class httpPatchRequest {
     @Test
     public void patchRequest() {
         JSONObject patchrequset = new JSONObject();
-        patchrequset.put("name", "Kwame Nkrumah");
+        patchrequset.put("name", "John Rawlings");
         patchrequset.put("job", "UIUX Developer");
         given().contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
