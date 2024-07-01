@@ -59,4 +59,16 @@ public class httpPostRequest {
                 .then()
                 .assertThat().statusCode(400).log().all();
     }
+    @Test
+    public void unsuccessfulRegister() {
+        JSONObject register = new JSONObject();
+        register.put("email", "sydney@fife");
+        given().contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(register.toJSONString())
+                .when()
+                .post("https://reqres.in/api/register")
+                .then()
+                .assertThat().statusCode(400).log().all();
+    }
 }
