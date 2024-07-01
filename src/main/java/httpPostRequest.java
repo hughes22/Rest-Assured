@@ -9,7 +9,7 @@ public class httpPostRequest {
     public void postRequest() {
         JSONObject postRequest = new JSONObject();
         postRequest.put("name", "Albert Kweku Hughes");
-        postRequest.put("job", "Developer");
+        postRequest.put("job", "Quality Assurance");
         given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
