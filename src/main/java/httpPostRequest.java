@@ -8,7 +8,7 @@ public class httpPostRequest {
     @Test
     public void postRequest() {
         JSONObject postRequest = new JSONObject();
-        postRequest.put("name", "Albert Hughes");
+        postRequest.put("name", "Albert Kweku Hughes");
         postRequest.put("job", "Developer");
         given()
                 .contentType(ContentType.JSON)
