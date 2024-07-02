@@ -62,7 +62,7 @@ public class httpPostRequest {
     @Test
     public void unsuccessfulRegister() {
         JSONObject register = new JSONObject();
-        register.put("email", "sydney@fife");
+        register.put("email", "amalitech.com");
         given().contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(register.toJSONString())
