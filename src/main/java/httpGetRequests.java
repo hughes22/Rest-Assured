@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class httpGetRequests {
     
 @Test
-    public void getUses() {
+    public void getUsers() {
         given().
                 when().
                 get("https://reqres.in/api/users?page=2").
@@ -16,7 +16,6 @@ public class httpGetRequests {
                 assertThat().statusCode(200).
                 body("data[0].'email'",equalTo("michael.lawson@reqres.in")).
                 body("data[2].'last_name'",equalTo("Funke")).log().all();
-
     }
     @Test
     public void singleUser() {
@@ -44,5 +43,14 @@ public class httpGetRequests {
             get("https://reqres.in/api/unknown").
             then().
             assertThat().statusCode(200).log().all();
+    }
+    @Test
+    public void delayedResponse(){
+    given()
+            .when().get("https://reqres.in/api/users?delay=3")
+            .then()
+            .assertThat().statusCode(200)
+            .body("data[5].'first_name'",equalTo("Tracey"))
+            .log().all();
     }
 }
