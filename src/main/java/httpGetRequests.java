@@ -51,6 +51,7 @@ public class httpGetRequests {
             .then()
             .assertThat().statusCode(200)
             .body("data[5].'first_name'",equalTo("Tracey"))
+            .body("data[3].'last_name'",equalTo("Holt"))
             .log().all();
     }
 }
