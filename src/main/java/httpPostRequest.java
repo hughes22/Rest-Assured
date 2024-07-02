@@ -3,7 +3,7 @@ import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-
+//Post Request
 public class httpPostRequest {
     @Test
     public void postRequest() {

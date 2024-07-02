@@ -1,6 +1,6 @@
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
-
+//Delete Request
 import static io.restassured.RestAssured.given;
 @Test
 public class httpDeleteRequest {
